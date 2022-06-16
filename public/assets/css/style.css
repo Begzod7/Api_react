@@ -5933,9 +5933,9 @@ only screen and (min-width: 1200px) and (max-width: 1499px) {
   padding: 0 27px 27px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr [2];
+  /* -ms-grid-columns: 1fr [2];
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 20px; */
 }
 
 .edumall-demo-option-item a {
@@ -17805,16 +17805,16 @@ only screen and (max-width: 767px) {
 .blog-details__nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr [2];
+  /* -ms-grid-columns: 1fr [2];
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
-  margin-top: 40px;
+  margin-top: 40px; */
 }
 
 @media only screen and (max-width: 575px) {
   .blog-details__nav {
-    -ms-grid-columns: 1fr [1];
-    grid-template-columns: repeat(1, 1fr);
+    /* -ms-grid-columns: 1fr [1];
+    grid-template-columns: repeat(1, 1fr); */
   }
 }
 

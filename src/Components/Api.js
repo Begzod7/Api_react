@@ -80,23 +80,26 @@ function Api() {
 
 
             <div className='container'>
-                {/* Modules */}
-                <div className="row m-2 p-4">
-                    <h2 className='text-center'>MODULLAR</h2>
-                    <Swiper
-                        // install Swiper modules
-                        modules={[Navigation, Pagination, A11y]}
-                        spaceBetween={50}
-                        slidesPerView={3}
-                        navigation
-                        pagination={{ clickable: true }}
-                        onSwiper={(swiper) => console.log(swiper)}
-                        onSlideChange={() => console.log('slide change')}
-                    >
+
+                <h2 className='text-center'>MODULLAR</h2>
+                <Swiper
+                    // install Swiper modules
+                    modules={[Navigation, Pagination, A11y]}
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    navigation
+                    pagination={{ clickable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                    style={{ padding: '10px' }}
+                >
+                    {/* Modules */}
+                    <div className="row m-2 p-4">
+
                         {modules.map((item) => {
                             return <SwiperSlide key={item.id} className="col-sm-6 col-md-3 v my-2">
                                 <div style={{ marginBottom: '30px' }} >
-                                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                                    <div>
 
                                         <div className="card_modul shadow-sm w-100" style={{ minHeight: '150px', maxHeight: "180", borderRadius: '15px' }}>
                                             <div className="card-body">
@@ -132,8 +135,9 @@ function Api() {
                             </SwiperSlide>
 
                         })};
-                    </Swiper>
-                </div>
+
+                    </div>
+                </Swiper>
             </div>
 
             <Between />
