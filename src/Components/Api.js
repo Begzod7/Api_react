@@ -23,7 +23,7 @@ function Api() {
 
     const fetchComments = async () => {
         const res = await fetch(
-            `https://api.bimm.uz/api/shared/dashboard.php`
+            `http://api.bimm.uz/api/shared/dashboard.php`
         );
         const data = await res.json();
 
