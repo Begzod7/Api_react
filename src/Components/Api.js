@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import './Style.css'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { RiUserLine } from 'react-icons/ri'
+import { MdAlternateEmail } from 'react-icons/md'
+import { FcCallback } from 'react-icons/fc'
 import Between from './Between';
 import Partner from './Partner';
 import Imgs from '../imgs/edumall-shape-01.png';
@@ -151,11 +153,19 @@ function Api() {
                         return <div key={item.id} className="col-sm-6 col-md-3 v my-2" data-aos="zoom-out-down" data-aos-duration="1500">
                             <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
                                 <div className="card-body">
-                                    <img src={item.src} />
+                                    <img src={item.src} style={{ width: '100%', height: '200px' }} />
                                     <h5 className="card-title text-center h2"></h5>
+                                    <img src={item.src} />
                                     <h6 className="card-subtitle mb-2 text-meted text-center">{item.modul}</h6>
                                     <p className='card-text'>{item.name_report}</p>
                                     <p className='card-text'>{item.lecturer}</p>
+                                    <div className='star'>
+                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                        <AiOutlineStar />
+                                    </div>
                                     {/* <p className='card-text'>{item.started_at}</p>
                                     <p className='card-text'>{item.created_at}</p>
                                     <p className='card-text'>{item.duration}</p>
@@ -206,8 +216,8 @@ function Api() {
                                                     <p className='card-text'>{item.workplace.substring(0, 50)}...</p>
                                                     <p className='card-text'>{item.wp_info}</p>
                                                     <div>
-                                                        <p className='card-text'>{item.email}</p>
-                                                        <p className='card-text'>{item.contact}</p>
+                                                        <p className='card-text'><MdAlternateEmail /> {item.email}</p>
+                                                        <p className='card-text'><FcCallback />  {item.contact}</p>
                                                     </div>
                                                     <p className='card-text'>{item.note}</p>
                                                     <p className='card-text'>{item.c_id}</p>
