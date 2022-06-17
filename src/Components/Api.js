@@ -42,44 +42,42 @@ function Api() {
     }, []);
     return (
         <div className='full'>
-            <div style={{ background: '#fbfbfb' }}>
-                <div className='container'>
 
-                    {/* Courses */}
-                    <div className="row py-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-                        <h2 className='text-center'>KURSLAR</h2>
-                        {courses.map((item) => {
-                            return <div key={item.id} className="col-sm-6 col-md-3 v my-2" >
-                                <div className="card shadow-sm w-100 courses" style={{ minHeight: '120px', borderRadius: '10px', border: '1px solid #99FFFF', boxShadow: '10px 10px 10px 2px rgba(34, 60, 80, 0.2)' }}>
-                                    <div className="card-body">
-                                        <div className='row'>
-                                            <div className='col-md-4'>
-                                                <img src={item.src} style={{ width: '100px', height: '100px' }} />
+            <div className='container'>
+
+                {/* Courses */}
+                <div className="row py-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                    <h2 className='text-center'>KURSLAR</h2>
+                    {courses.map((item) => {
+                        return <div key={item.id} className="col-sm-6 col-md-3 v my-2" >
+                            <div className="card shadow-sm w-100 courses" style={{ minHeight: '120px', borderRadius: '10px', border: '1px solid #99FFFF', boxShadow: '10px 10px 10px 2px rgba(34, 60, 80, 0.2)' }}>
+                                <div className="card-body">
+                                    <div className='row'>
+                                        <div className='col-md-4'>
+                                            <img src={item.src} style={{ width: '100px', height: '100px' }} />
+                                        </div>
+                                        <div className='col-md-8'>
+                                            <p className="card-subtitle mb-2 text-meted" style={{ marginLeft: '4px' }}>
+                                                {item.dir_name.substring(0, 25)}...</p>
+                                            <p className='card-text' style={{ marginLeft: '4px' }}>Tinglovchilar:{item.countvotes}</p>
+                                            <div className='star'>
+                                                <AiFillStar style={{ color: '#f7c04d' }} />
+                                                <AiFillStar style={{ color: '#f7c04d' }} />
+                                                <AiFillStar style={{ color: '#f7c04d' }} />
+                                                <AiFillStar style={{ color: '#f7c04d' }} />
+                                                <AiOutlineStar />
                                             </div>
-                                            <div className='col-md-8'>
-                                                <p className="card-subtitle mb-2 text-meted" style={{ marginLeft: '4px' }}>
-                                                    {item.dir_name.substring(0, 25)}...</p>
-                                                <p className='card-text' style={{ marginLeft: '4px' }}>Tinglovchilar:{item.countvotes}</p>
-                                                <div className='star'>
-                                                    <AiFillStar style={{ color: '#f7c04d' }} />
-                                                    <AiFillStar style={{ color: '#f7c04d' }} />
-                                                    <AiFillStar style={{ color: '#f7c04d' }} />
-                                                    <AiFillStar style={{ color: '#f7c04d' }} />
-                                                    <AiOutlineStar />
-                                                </div>
-                                                {/* <p className='card-text'>{item.summvotes}</p> */}
-                                                {/* <p className='card-text'>{item.cntlis}</p>
+                                            {/* <p className='card-text'>{item.summvotes}</p> */}
+                                            {/* <p className='card-text'>{item.cntlis}</p>
                                              <p className='card-text'>{item.up_date}</p> */}
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>;
-                        })}
-                    </div>
+                            </div>
+                        </div>;
+                    })}
                 </div>
             </div>
-
 
             <div className='container'>
 
@@ -183,65 +181,67 @@ function Api() {
                 </div>
             </div >
 
-            <div class="testimonial-section bg-color-01 section-padding-01 scene" style={{ background: '#F4F9FF' }}>
+            <div className='container'>
 
-                <div className='container'>
-                    {/* Lectures */}
-                    <div className="row m-2 p-4">
-                        <h2 className='text-center'>MARUZACHILAR</h2>
+                <div class="testimonial-section bg-color-01 section-padding-01 scene" style={{ background: '#F4F9FF' }}>
+                    <div className='container'>
+                        {/* Lectures */}
+                        <div className="row m-2 p-4">
+                            <h2 className='text-center'>MARUZACHILAR</h2>
 
-                        <Swiper
-                            // install Swiper modules
-                            modules={[Navigation, Pagination, A11y]}
-                            spaceBetween={50}
-                            slidesPerView={3}
-                            navigation
-                            pagination={{ clickable: true }}
-                            onSwiper={(swiper) => console.log(swiper)}
-                            onSlideChange={() => console.log('slide change')}
-                        >
-                            {lecturers.map((item) => {
-                                return <SwiperSlide key={item.id} className="col-sm-6 col-md-4 v my-2" >
-                                    <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
-                                        <div className="card-body">
-                                            <h5 className="card-title text-center h2"></h5>
-                                            {/* <img src={`${process.env.PUBLIC_URL}${item.src}`} style={{ width: 225 }} ></img> */}
-                                            <div className='lecture'>
-                                                <div>
-                                                    <img src={item.src} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%' }} />
-                                                </div>
-                                                <div className='lecture_text'>
-                                                    <h6 className="card-subtitle mb-2 text-meted text-center">{item.fio}</h6>
-                                                    <p className='card-text'>{item.rank}</p>
-                                                    <p className='card-text'>{item.workplace.substring(0, 50)}...</p>
-                                                    <p className='card-text'>{item.wp_info}</p>
+                            <Swiper
+                                // install Swiper modules
+                                modules={[Navigation, Pagination, A11y]}
+                                spaceBetween={50}
+                                slidesPerView={3}
+                                navigation
+                                pagination={{ clickable: true }}
+                                onSwiper={(swiper) => console.log(swiper)}
+                                onSlideChange={() => console.log('slide change')}
+                            >
+                                {lecturers.map((item) => {
+                                    return <SwiperSlide key={item.id} className="col-sm-6 col-md-4 v my-2" >
+                                        <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
+                                            <div className="card-body">
+                                                <h5 className="card-title text-center h2"></h5>
+                                                {/* <img src={`${process.env.PUBLIC_URL}${item.src}`} style={{ width: 225 }} ></img> */}
+                                                <div className='lecture'>
                                                     <div>
-                                                        <p className='card-text'><MdAlternateEmail /> {item.email}</p>
-                                                        <p className='card-text'><FcCallback />  {item.contact}</p>
+                                                        <img src={item.src} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%' }} />
                                                     </div>
-                                                    <p className='card-text'>{item.note}</p>
-                                                    <p className='card-text'>{item.c_id}</p>
+                                                    <div className='lecture_text'>
+                                                        <h6 className="card-subtitle mb-2 text-meted text-center">{item.fio}</h6>
+                                                        <p className='card-text'>{item.rank}</p>
+                                                        <p className='card-text'>{item.workplace.substring(0, 50)}...</p>
+                                                        <p className='card-text'>{item.wp_info}</p>
+                                                        <div>
+                                                            <p className='card-text'><MdAlternateEmail /> {item.email}</p>
+                                                            <p className='card-text'><FcCallback />  {item.contact}</p>
+                                                        </div>
+                                                        <p className='card-text'>{item.note}</p>
+                                                        <p className='card-text'>{item.c_id}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            {/* <p className='card-text'>{item.cntmodul}</p>
+                                                {/* <p className='card-text'>{item.cntmodul}</p>
                     <p className='card-text'>{item.countvotes}</p> */}
-                                            <p className='card-text'>{item.summvotes}</p>
+                                                <p className='card-text'>{item.summvotes}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>;
-                            })};
-                        </Swiper>
+                                    </SwiperSlide>;
+                                })};
+                            </Swiper>
+                        </div>
                     </div>
+
+                    <div class="testimonial-section__shape-01" data-depth="-0.5"></div>
+                    <div class="testimonial-section__shape-02" data-depth="0.7"></div>
+                    <div class="testimonial-section__shape-03" data-depth="-0.5"></div>
+                    <img class="testimonial-section__shape-04" data-depth="0.7" src="assets/images/shape/edumall-shape-01.png" alt="Shape" width="179" height="178" />
+
                 </div>
 
-                <div class="testimonial-section__shape-01" data-depth="-0.5"></div>
-                <div class="testimonial-section__shape-02" data-depth="0.7"></div>
-                <div class="testimonial-section__shape-03" data-depth="-0.5"></div>
-                <img class="testimonial-section__shape-04" data-depth="0.7" src="assets/images/shape/edumall-shape-01.png" alt="Shape" width="179" height="178" />
-
             </div>
-
 
             {/* <ReactPaginate
           previousLabel={'prev'}
