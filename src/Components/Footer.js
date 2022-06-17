@@ -1,5 +1,6 @@
 import React from 'react';
-
+import './Script.js';
+import './Style.css';
 const Footer = () => {
     return (
         <>
@@ -32,6 +33,14 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
+            <br />
+
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+            <div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+            <div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible
+                <strong>when the user starts to scroll the page</strong>.</div>
 
             <br />
             {/* footer */}
@@ -122,8 +131,6 @@ const Footer = () => {
                 </div>
 
             </div>
-
-
 
             <button id="backBtn" class="back-to-top backBtn">
                 <i class="arrow-top fal fa-long-arrow-up"></i>
