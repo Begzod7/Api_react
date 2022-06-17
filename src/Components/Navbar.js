@@ -1,16 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import './Style.css';
 import { FcCallback } from 'react-icons/fc';
 import { FaRegEnvelope } from 'react-icons/fa';
 import { BiChevronDown } from 'react-icons/bi';
-
-// import { Navbar, Container, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
+import About from "./About";
 
 const Header = () => {
     return (
 
-        <div classNameName="main-wrapper">
+        <div className="main-wrapper">
             <div className="header-section header-sticky">
 
 
@@ -134,7 +133,7 @@ const Header = () => {
                                             <li>
                                                 <a href="#"><span>Blog</span></a>
                                                 <ul className="sub-menu">
-                                                    <li><a href="blog-grid-01.html"><span>Grid Basic Layout</span></a></li>
+                                                    <li><span> <NavLink to="/about">About</NavLink></span></li>
                                                     <li><a href="blog-grid-02.html"><span>Grid Wide</span></a></li>
                                                     <li><a href="blog-grid-left-sidebar.html"><span>Grid Left Sidebar</span></a></li>
                                                     <li><a href="blog-grid-right-sidebar.html"><span>Grid Right Sidebar</span></a></li>

@@ -5,7 +5,6 @@ import BaseTop from "./Top";
 import Footer from "./Footer";
 import './Style.css';
 
-
 // import { Navbar, Container, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
 
 const Base = () => {
