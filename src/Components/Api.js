@@ -152,10 +152,12 @@ function Api() {
                             <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
                                 <div className="card-body">
                                     <img src={item.src} style={{ width: '100%', height: '200px' }} />
-                                    <h5 className="card-title text-center h2"></h5>
-                                    <h6 className="card-subtitle mb-2 text-meted text-center">{item.modul}</h6>
-                                    <p className='card-text'>{item.name_report}</p>
-                                    <p className='card-text'>{item.lecturer}</p>
+                                    <div style={{ minHeight: '100px', paddingTop: '6px' }}>
+                                        <h5 className="card-title text-center h2"></h5>
+                                        <h6 className="card-subtitle mb-2 text-meted text-center">{item.modul}</h6>
+                                        <p className='card-text'>{item.name_report}</p>
+                                        <p className='card-text'>{item.lecturer}</p>
+                                    </div>
                                     <div className='star'>
                                         <AiFillStar style={{ color: '#f7c04d' }} />
                                         <AiFillStar style={{ color: '#f7c04d' }} />

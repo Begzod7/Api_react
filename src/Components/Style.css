@@ -77,6 +77,6 @@
 }
 
 .shadow-sm {
-    border: none;
+    border: none !important;
     box-shadow: 4px 4px 4px 4px rgba(173, 173, 173, 0.2) !important;
 }
