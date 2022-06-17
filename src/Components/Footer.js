@@ -1,7 +1,9 @@
 import React from 'react';
-import './Script.js';
 import './Style.css';
+import Back_top from './Back_top';
+
 const Footer = () => {
+
     return (
         <>
 
@@ -35,17 +37,10 @@ const Footer = () => {
             </div>
 
             <br />
+            <Back_top />
 
-            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-            <div style={{ background: "black", color: "white", padding: "30px" }}>Scroll Down</div>
-            <div style={{ background: "lightgrey", padding: "30px 30px 2500px" }}>This example demonstrates how to create a "scroll to top" button that becomes visible
-                <strong>when the user starts to scroll the page</strong>.</div>
-
-            <br />
             {/* footer */}
             <div class="footer-section" >
-
                 <div class="footer-widget-area section-padding-01">
                     <div class="container">
                         <div class="row gy-6">
@@ -136,6 +131,7 @@ const Footer = () => {
                 <i class="arrow-top fal fa-long-arrow-up"></i>
                 <i class="arrow-bottom fal fa-long-arrow-up"></i>
             </button>
+
         </>
 
     )

@@ -149,7 +149,7 @@ function Api() {
                     <h2 className='text-center'>WEBINAR</h2>
                     {webinars.map((item) => {
                         return <div key={item.id} className="col-sm-6 col-md-3 v my-2" data-aos="zoom-out-down" data-aos-duration="1500">
-                            <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
+                            <div className="card shadow-sm w-100" style={{ height: '400px', borderRadius: '10px', boxShadow: '0 0 10px rgb(51 51 51 / 15%)' }}>
                                 <div className="card-body">
                                     <img src={item.src} style={{ width: '100%', height: '200px' }} />
                                     <div style={{ minHeight: '100px', paddingTop: '6px' }}>
@@ -182,65 +182,61 @@ function Api() {
                 </div>
             </div >
 
-            <div className='container'>
+            <div class="testimonial-section bg-color-01 section-padding-01 scene" style={{ background: '#F4F9FF', width: '100%' }}>
+                <div className='container'>
+                    {/* Lectures */}
+                    <div className="row m-2 p-4">
+                        <h2 className='text-center'>MARUZACHILAR</h2>
 
-                <div class="testimonial-section bg-color-01 section-padding-01 scene" style={{ background: '#F4F9FF' }}>
-                    <div className='container'>
-                        {/* Lectures */}
-                        <div className="row m-2 p-4">
-                            <h2 className='text-center'>MARUZACHILAR</h2>
-
-                            <Swiper
-                                // install Swiper modules
-                                modules={[Navigation, Pagination, A11y]}
-                                spaceBetween={50}
-                                slidesPerView={3}
-                                navigation
-                                pagination={{ clickable: true }}
-                                onSwiper={(swiper) => console.log(swiper)}
-                                onSlideChange={() => console.log('slide change')}
-                            >
-                                {lecturers.map((item) => {
-                                    return <SwiperSlide key={item.id} className="col-sm-6 col-md-4 v my-2" >
-                                        <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center h2"></h5>
-                                                {/* <img src={`${process.env.PUBLIC_URL}${item.src}`} style={{ width: 225 }} ></img> */}
-                                                <div className='lecture'>
-                                                    <div>
-                                                        <img src={item.src} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%' }} />
-                                                    </div>
-                                                    <div className='lecture_text'>
-                                                        <h6 className="card-subtitle mb-2 text-meted text-center">{item.fio}</h6>
-                                                        <p className='card-text'>{item.rank}</p>
-                                                        <p className='card-text'>{item.workplace.substring(0, 50)}...</p>
-                                                        <p className='card-text'>{item.wp_info}</p>
-                                                        <div>
-                                                            <p className='card-text'><MdAlternateEmail /> {item.email}</p>
-                                                            <p className='card-text'><FcCallback />  {item.contact}</p>
-                                                        </div>
-                                                        <p className='card-text'>{item.note}</p>
-                                                        <p className='card-text'>{item.c_id}</p>
-                                                    </div>
+                        <Swiper
+                            // install Swiper modules
+                            modules={[Navigation, Pagination, A11y]}
+                            spaceBetween={50}
+                            slidesPerView={3}
+                            navigation
+                            pagination={{ clickable: true }}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            onSlideChange={() => console.log('slide change')}
+                        >
+                            {lecturers.map((item) => {
+                                return <SwiperSlide key={item.id} className="col-sm-6 col-md-4 v my-2" >
+                                    <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
+                                        <div className="card-body">
+                                            <h5 className="card-title text-center h2"></h5>
+                                            {/* <img src={`${process.env.PUBLIC_URL}${item.src}`} style={{ width: 225 }} ></img> */}
+                                            <div className='lecture'>
+                                                <div>
+                                                    <img src={item.src} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%' }} />
                                                 </div>
-
-                                                {/* <p className='card-text'>{item.cntmodul}</p>
-                    <p className='card-text'>{item.countvotes}</p> */}
-                                                <p className='card-text'>{item.summvotes}</p>
+                                                <div className='lecture_text'>
+                                                    <h6 className="card-subtitle mb-2 text-meted text-center">{item.fio}</h6>
+                                                    <p className='card-text'>{item.rank}</p>
+                                                    <p className='card-text'>{item.workplace.substring(0, 50)}...</p>
+                                                    <p className='card-text'>{item.wp_info}</p>
+                                                    <div>
+                                                        <p className='card-text'><MdAlternateEmail /> {item.email}</p>
+                                                        <p className='card-text'><FcCallback />  {item.contact}</p>
+                                                    </div>
+                                                    <p className='card-text'>{item.note}</p>
+                                                    <p className='card-text'>{item.c_id}</p>
+                                                </div>
                                             </div>
+
+                                            {/* <p className='card-text'>{item.cntmodul}</p>
+                    <p className='card-text'>{item.countvotes}</p> */}
+                                            <p className='card-text'>{item.summvotes}</p>
                                         </div>
-                                    </SwiperSlide>;
-                                })};
-                            </Swiper>
-                        </div>
+                                    </div>
+                                </SwiperSlide>;
+                            })};
+                        </Swiper>
                     </div>
-
-                    <div class="testimonial-section__shape-01" data-depth="-0.5"></div>
-                    <div class="testimonial-section__shape-02" data-depth="0.7"></div>
-                    <div class="testimonial-section__shape-03" data-depth="-0.5"></div>
-                    <img class="testimonial-section__shape-04" data-depth="0.7" src="assets/images/shape/edumall-shape-01.png" alt="Shape" width="179" height="178" />
-
                 </div>
+
+                <div class="testimonial-section__shape-01" data-depth="-0.5"></div>
+                <div class="testimonial-section__shape-02" data-depth="0.7"></div>
+                <div class="testimonial-section__shape-03" data-depth="-0.5"></div>
+                <img class="testimonial-section__shape-04" data-depth="0.7" src="assets/images/shape/edumall-shape-01.png" alt="Shape" width="179" height="178" />
 
             </div>
 
