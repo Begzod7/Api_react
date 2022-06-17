@@ -151,6 +151,7 @@ function Api() {
                         return <div key={item.id} className="col-sm-6 col-md-3 v my-2" data-aos="zoom-out-down" data-aos-duration="1500">
                             <div className="card shadow-sm w-100" style={{ minHeight: '225px', borderRadius: '10px' }}>
                                 <div className="card-body">
+                                    <img src={item.src} />
                                     <h5 className="card-title text-center h2"></h5>
                                     <h6 className="card-subtitle mb-2 text-meted text-center">{item.modul}</h6>
                                     <p className='card-text'>{item.name_report}</p>
