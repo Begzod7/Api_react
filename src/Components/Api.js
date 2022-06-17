@@ -155,7 +155,7 @@ function Api() {
                                 <div className="card-body">
                                     <img src={item.src} style={{ width: '100%', height: '200px' }} />
                                     <h5 className="card-title text-center h2"></h5>
-                                    <img src={item.src} />
+                                    <img src={item.src} style={{ width: '100%', height: '200px' }} />
                                     <h6 className="card-subtitle mb-2 text-meted text-center">{item.modul}</h6>
                                     <p className='card-text'>{item.name_report}</p>
                                     <p className='card-text'>{item.lecturer}</p>
