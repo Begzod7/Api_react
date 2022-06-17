@@ -73,10 +73,10 @@
 
 .card:hover {
 
-    box-shadow: 4px 4px 4px #17b8c1;
+    box-shadow: 4px 4px 4px 4px #17b8c1;
 }
 
 .shadow-sm {
-
+    border: none;
     box-shadow: 4px 4px 4px 4px rgba(173, 173, 173, 0.2) !important;
 }
