@@ -131,10 +131,10 @@
     }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 768px) {
+@media only screen and (min-width: 240px) and (max-width: 768px) {
 
-    .webinar .card-body {
-        height: 500px;
+    .webinar {
+        height: 480px;
     }
 }
 
