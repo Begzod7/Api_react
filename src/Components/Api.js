@@ -171,7 +171,7 @@ function Api() {
                     <h2 className='text-center'>WEBINAR</h2>
                     {webinars.map((item) => {
                         return <div key={item.id} className="col-sm-6 col-md-3 v my-2 webinar" data-aos="zoom-out-down" data-aos-duration="1500">
-                            <div className="card shadow-sm w-100" style={{ height: '440px', borderRadius: '10px', boxShadow: '0 0 10px rgb(51 51 51 / 15%)' }}>
+                            <div className="card shadow-sm w-100" style={{ height: '450px', borderRadius: '10px', boxShadow: '0 0 10px rgb(51 51 51 / 15%)' }}>
                                 <div className="card-body">
                                     <img src={item.src} style={{ width: '100%', height: '200px' }} />
                                     <div style={{ minHeight: '100px', paddingTop: '6px' }}>
