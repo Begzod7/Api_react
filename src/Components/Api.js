@@ -212,7 +212,10 @@ function Api() {
                         <Swiper
                             // install Swiper modules
                             breakpoints={{
-
+                                320: {
+                                    // width: 576,
+                                    slidesPerView: 1,
+                                },
                                 400: {
                                     // width: 576,
                                     slidesPerView: 1,
