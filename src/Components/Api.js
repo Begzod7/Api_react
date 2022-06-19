@@ -49,14 +49,14 @@ function Api() {
                 <div className="row py-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                     <h2 className='text-center'>KURSLAR</h2>
                     {courses.map((item) => {
-                        return <div key={item.id} className="col-sm-6 col-md-3 v my-2" >
+                        return <div key={item.id} className="col-sm-6 col-md-4 col-xl-3 v my-2" >
                             <div className="card shadow-sm w-100 courses" style={{ minHeight: '120px', borderRadius: '10px', border: '1px solid #99FFFF', boxShadow: '10px 10px 10px 2px rgba(34, 60, 80, 0.2)' }}>
                                 <div className="card-body">
-                                    <div className='row'>
-                                        <div className='col-md-4'>
+                                    <div className='cours'>
+                                        <div className='course_img'>
                                             <img src={item.src} style={{ width: '100px', height: '100px' }} />
                                         </div>
-                                        <div className='col-md-8'>
+                                        <div className='course_text'>
                                             <p className="card-subtitle mb-2 text-meted" style={{ marginLeft: '4px' }}>
                                                 {item.dir_name.substring(0, 25)}...</p>
                                             <p className='card-text' style={{ marginLeft: '4px' }}>Tinglovchilar:{item.countvotes}</p>
@@ -136,8 +136,8 @@ function Api() {
                                                 {/* <p className='card-text'>{item.selectedby}</p> */}
                                                 <div className='course_info'>
                                                     <div>
-                                                        <span style={{ fontWeight: '600' }}>4 </span>
-                                                        <span>/5</span>
+                                                        <span style={{ fontWeight: '600' }}>{item.countvotes} </span>
+                                                        <span>/{item.summvotes}</span>
                                                         <div>
                                                             <AiFillStar style={{ color: '#f7c04d' }} />
                                                             <AiFillStar style={{ color: '#f7c04d' }} />
@@ -170,8 +170,8 @@ function Api() {
 
                     <h2 className='text-center'>WEBINAR</h2>
                     {webinars.map((item) => {
-                        return <div key={item.id} className="col-sm-6 col-md-3 v my-2" data-aos="zoom-out-down" data-aos-duration="1500">
-                            <div className="card shadow-sm w-100" style={{ height: '400px', borderRadius: '10px', boxShadow: '0 0 10px rgb(51 51 51 / 15%)' }}>
+                        return <div key={item.id} className="col-sm-6 col-md-3 v my-2 webinar" data-aos="zoom-out-down" data-aos-duration="1500">
+                            <div className="card shadow-sm w-100" style={{ height: '420px', borderRadius: '10px', boxShadow: '0 0 10px rgb(51 51 51 / 15%)' }}>
                                 <div className="card-body">
                                     <img src={item.src} style={{ width: '100%', height: '200px' }} />
                                     <div style={{ minHeight: '100px', paddingTop: '6px' }}>
@@ -180,12 +180,17 @@ function Api() {
                                         <p className='card-text'>{item.name_report}</p>
                                         <p className='card-text'>{item.lecturer}</p>
                                     </div>
-                                    <div className='star'>
-                                        <AiFillStar style={{ color: '#f7c04d' }} />
-                                        <AiFillStar style={{ color: '#f7c04d' }} />
-                                        <AiFillStar style={{ color: '#f7c04d' }} />
-                                        <AiFillStar style={{ color: '#f7c04d' }} />
-                                        <AiOutlineStar />
+                                    <div className='webinar_link'>
+                                        <a className='card-text' href={item.excabinet} style={{ color: 'blue' }}> Zoom | </a>
+                                        <a className='card-text' href={item.record} style={{ color: 'red' }}> |  Youtube</a>
+
+                                        <div className='starw'>
+                                            <AiFillStar style={{ color: '#f7c04d' }} />
+                                            <AiFillStar style={{ color: '#f7c04d' }} />
+                                            <AiFillStar style={{ color: '#f7c04d' }} />
+                                            <AiFillStar style={{ color: '#f7c04d' }} />
+                                            <AiOutlineStar />
+                                        </div>
                                     </div>
                                     {/* <p className='card-text'>{item.started_at}</p>
                                     <p className='card-text'>{item.created_at}</p>
@@ -264,12 +269,31 @@ function Api() {
                                                     </div>
                                                     <p className='card-text'>{item.note}</p>
                                                     <p className='card-text'>{item.c_id}</p>
+
                                                 </div>
                                             </div>
 
                                             {/* <p className='card-text'>{item.cntmodul}</p>
                     <p className='card-text'>{item.countvotes}</p> */}
+                                            <div className='course_info'>
+                                                <div>
+                                                    <span style={{ fontWeight: '600' }}>{item.cntmodul}</span>
+                                                    <span>/5</span>
+                                                    <div>
+                                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                                        <AiFillStar style={{ color: '#f7c04d' }} />
+                                                        <AiOutlineStar />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span><RiUserLine /> 1</span>
+                                                </div>
+                                            </div>
+
                                             <p className='card-text'>{item.summvotes}</p>
+
                                         </div>
                                     </div>
                                 </SwiperSlide>;

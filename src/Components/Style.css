@@ -67,8 +67,17 @@
 }
 
 .star {
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: start;
+}
+
+.starw {
+    display: flex;
+    align-items: flex-end !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
 }
 
 .card:hover {
@@ -107,4 +116,27 @@
     }
 }
 
-@media (max-width: 576px) {}
+.webinar_link {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-body {
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1600px) {
+    .webinar {
+        width: 50%;
+    }
+}
+
+.cours {
+    display: flex;
+}
+
+.webinar_link {
+
+    vertical-align: bottom;
+    display: table-cell;
+}
