@@ -93,3 +93,18 @@
     font-weight: 600;
 
 }
+
+@media (max-width: 786px) {
+    .slider-caption-04 {
+        margin-top: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .slider-register__box {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {}

@@ -84,6 +84,26 @@ function Api() {
                 <h2 className='text-center'>MODULLAR</h2>
                 <Swiper
                     // install Swiper modules
+                    breakpoints={{
+
+                        400: {
+                            // width: 576,
+                            slidesPerView: 1,
+                        },
+                        576: {
+                            // width: 576,
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            // width: 768,
+                            slidesPerView: 2,
+                        },
+                        992: {
+                            // width: 768,
+                            slidesPerView: 3,
+                        },
+                    }}
+
                     modules={[Navigation, Pagination, A11y]}
                     spaceBetween={50}
                     slidesPerView={3}
@@ -101,7 +121,7 @@ function Api() {
                                 <div style={{ marginBottom: '30px' }} >
                                     <div>
 
-                                        <div className="card_modul shadow-sm w-100" style={{ minHeight: '150px', maxHeight: "180", borderRadius: '15px' }}>
+                                        <div className="card shadow-sm w-100" style={{ minHeight: '150px', maxHeight: "180", borderRadius: '15px' }}>
                                             <div className="card-body">
                                                 <h5 className="card-title text-center h2"></h5>
                                                 <img src={item.src} alt="" style={{ width: '100%', height: '200px' }} />
@@ -188,8 +208,28 @@ function Api() {
                     <div className="row m-2 p-4">
                         <h2 className='text-center'>MARUZACHILAR</h2>
 
+
                         <Swiper
                             // install Swiper modules
+                            breakpoints={{
+
+                                400: {
+                                    // width: 576,
+                                    slidesPerView: 1,
+                                },
+                                576: {
+                                    // width: 576,
+                                    slidesPerView: 1,
+                                },
+                                768: {
+                                    // width: 768,
+                                    slidesPerView: 2,
+                                },
+                                992: {
+                                    // width: 768,
+                                    slidesPerView: 3,
+                                },
+                            }}
                             modules={[Navigation, Pagination, A11y]}
                             spaceBetween={50}
                             slidesPerView={3}
@@ -239,6 +279,7 @@ function Api() {
                 <img class="testimonial-section__shape-04" data-depth="0.7" src="assets/images/shape/edumall-shape-01.png" alt="Shape" width="179" height="178" />
 
             </div>
+
 
             {/* <ReactPaginate
           previousLabel={'prev'}
