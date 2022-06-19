@@ -133,7 +133,7 @@
 
 @media only screen and (min-width: 300px) and (max-width: 768px) {
 
-    .webinar .card {
+    .webinar .card-body {
         height: 500px;
     }
 }
